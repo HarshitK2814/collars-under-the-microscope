@@ -1,0 +1,6 @@
+# Evaluation periods (reset dates). Tier-B (free) design: VIX3M/VIX6M history starts around 2008-2011,
+# so development starts 2011. Confirm the exact start dates after the Cboe download.
+development: ["2011-01", "2016-12"]
+validation: ["2017-01", "2019-12"]
+test: ["2020-01", "2023-12"]        # locked until research/preregistration.md is committed
+recent: ["2024-01", null]           # reported separately; never used for any choice

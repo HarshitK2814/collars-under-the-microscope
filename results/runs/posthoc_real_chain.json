@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-09-25",
+  "spot": 7743.41,
+  "expiry": "2026-12-31",
+  "days": 97,
+  "n_strikes_compared": 388,
+  "iv_mae_volpts": 0.71,
+  "iv_bias_volpts": 0.04,
+  "atm_iv_model": 14.78,
+  "atm_iv_real": 14.93,
+  "collar_cap_model_pct": 4.75,
+  "collar_cap_real_pct": 4.38
+}

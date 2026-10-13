@@ -1,6 +1,7 @@
 .env
 data/
-results/runs/
+results/runs/*.parquet
+results/runs/*.log
 __pycache__/
 *.egg-info/
 .ipynb_checkpoints/

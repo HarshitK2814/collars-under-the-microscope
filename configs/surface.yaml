@@ -1,0 +1,8 @@
+c: 0.81633
+a: -0.27601
+b: -0.0113
+h: 0.00464
+fitted_on: development 2011-01..2016-12
+fitted_at: '2026-09-27T15:25:18'
+objective: sum of monthly MSE vs CLLZ, BXM, PUT, PPUT
+objective_value: 0.59737

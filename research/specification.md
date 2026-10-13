@@ -40,6 +40,7 @@ This makes it a good vehicle for learning option pricing, surfaces, Greeks and t
 * Long put strike $K_1 = 0.95\,S_0$ and short put $K_2 = 0.80\,S_0$, from the "5% to 20%" protection band.
 * Call strike $K_c$ solved so that the collar costs zero at mid prices. The implied cap is then *measured*, not assumed, and checked against the 3.5–5.5% disclosure.
 * Expiry at the next calendar quarter-end (≈ 3 months); resets on the last trading day of each quarter. **"At least quarterly" and the exact reset timing are not fully specified**, so the reset day is a parameter we study.
+  *Correction (2026-09-27, Week-1 check):* the 497K does define the hedge periods as calendar quarters, and the 2026-06-30 N-PORT confirms quarter-end expiries at 0.947 / 0.798 / 1.052 × S. The fund's calendar is phase 0; RQ1 asks how lucky that phase is. See `research/institutional_methodology.md`.
 * Equity sleeve = S&P 500 total return. This isolates the overlay.
 
 **Extension [Extension]:** timing-luck measurement, laddering, volatility-scaled strikes, a VRP decomposition, and a beta-matched evaluation.
@@ -246,6 +247,8 @@ An open, reproducible measurement of **how much reset-date choice matters for a 
 * Overinterpreting a single crash (2020) as evidence: report the results with and without it.
 
 ## 20. Resume Version
+
+*Filled-in version with the actual results: `../../resume/projects_section.md`. The template below is kept as planned.*
 
 **Collars Under the Microscope: Timing Luck and Strike Design in a Systematic Put-Spread Collar** *(inspired by the JPMorgan Hedged Equity Fund's SEC-disclosed overlay)*
 * Rebuilt an SEC-disclosed S&P 500 put-spread collar (95/80 put spread financed by a short call, quarterly reset) with an SVI implied-volatility surface, daily Greeks, and delta–gamma–vega–theta P&L attribution over `[years]`.
