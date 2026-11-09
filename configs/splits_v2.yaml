@@ -1,0 +1,8 @@
+# v2 (2026-11). development + validation are the only periods used for any choice or fitted constant.
+# test and recent were reported in v1, so in v2 they are "seen period (v1 reported it)".
+# forward starts at the v2 freeze date.
+development: ["2011-01", "2016-12"]
+validation: ["2017-01", "2019-12"]
+test: ["2020-01", "2023-12"]
+recent: ["2024-01", null]
+forward: ["2026-11", null]
