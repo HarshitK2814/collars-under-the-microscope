@@ -1,0 +1,57 @@
+{
+  "label": "seen period (v1 reported it)",
+  "alpha": 0.1,
+  "gamma": 0.02,
+  "window": 8,
+  "funds": {
+    "HE1": {
+      "n_quarters": 28,
+      "n_scored": 20,
+      "covered": 19,
+      "coverage": 0.95,
+      "coverage_95ci": [
+        0.7512672372279722,
+        0.9987349105020502
+      ],
+      "mean_error_pp": 0.04827058899322826,
+      "mae_pp": 0.342994291682408,
+      "mean_interval_width_pp": 1.3527642882081568
+    },
+    "HE2": {
+      "n_quarters": 22,
+      "n_scored": 14,
+      "covered": 13,
+      "coverage": 0.9285714285714286,
+      "coverage_95ci": [
+        0.6613155100681788,
+        0.9981932193408746
+      ],
+      "mean_error_pp": -0.2390540697033271,
+      "mae_pp": 0.4748867839672089,
+      "mean_interval_width_pp": 1.7442592036033477
+    },
+    "HE3": {
+      "n_quarters": 22,
+      "n_scored": 14,
+      "covered": 11,
+      "coverage": 0.7857142857142857,
+      "coverage_95ci": [
+        0.4920243229515281,
+        0.9534207121101327
+      ],
+      "mean_error_pp": -0.19616254565719593,
+      "mae_pp": 0.43017645388543463,
+      "mean_interval_width_pp": 1.7865480870938608
+    }
+  },
+  "pooled": {
+    "n_scored": 48,
+    "covered": 43,
+    "coverage": 0.8958333333333334,
+    "coverage_95ci": [
+      0.7734223387162362,
+      0.965301877878804
+    ]
+  },
+  "note": "Small samples (about 20 scored quarters per fund, serially dependent): the CI is exact-binomial and optimistic. Disclosed option values at period ends are expiry-day intrinsic values, so strikes, not values, test the pricer."
+}

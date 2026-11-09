@@ -1,0 +1,75 @@
+{
+  "quantlib_max_abs_error": {
+    "price": 6.661338147750939e-16,
+    "delta": 5.329070518200751e-15,
+    "gamma": 6.039613253960852e-14,
+    "vega": 8.326672684688674e-16,
+    "n": 400
+  },
+  "chain": {
+    "as_of": "2026-09-25",
+    "expiry": "2026-12-31",
+    "spot": 7743.4102,
+    "n_options_used": 484,
+    "h_v1_volpts": 0.464,
+    "h_chain_median_volpts": 0.03856766076287138,
+    "h_chain_put_wing_median_volpts": 0.046450574648170644,
+    "h_chain_call_wing_median_volpts": 0.035249642195737736,
+    "h_chain_p25_p75_volpts": [
+      0.03499019438024314,
+      0.05401748779847437
+    ],
+    "svi_params_a_b_rho_m_s": [
+      -0.0421251059283663,
+      1.3316085341580295,
+      -0.9989999904690898,
+      -0.8314323362033977,
+      0.24233714185854643
+    ],
+    "svi_rmse_volpts": 0.32800253233495363,
+    "frozen_surface_rmse_volpts": 0.9300044840850735,
+    "frozen_surface_bias_volpts": 0.04201873679488716,
+    "capacity_fund_contracts_per_leg_latest_n_port": 27069.0,
+    "capacity_nport_period": "2026-06-30",
+    "capacity_chain_open_interest": {
+      "long_put_K1": {
+        "nearest_strikes": [
+          7330.0,
+          7335.0,
+          7325.0
+        ],
+        "open_interest_sum_3": 495.0
+      },
+      "short_put_K2": {
+        "nearest_strikes": [
+          6180.0,
+          6175.0,
+          6185.0
+        ],
+        "open_interest_sum_3": 187.0
+      },
+      "short_call_Kc": {
+        "nearest_strikes": [
+          8145.0,
+          8140.0,
+          8150.0
+        ],
+        "open_interest_sum_3": 106456.0
+      }
+    },
+    "capacity_note": "one chain snapshot of a different expiry from the fund's; a rough scale check, not a capacity estimate"
+  },
+  "phase_dispersion_dev_val": {
+    "v1_h": {
+      "std_ann_return_pct": 0.8434413698174573,
+      "min_pct": 4.83824539738944,
+      "max_pct": 8.22646514918035
+    },
+    "2x_v1_h": {
+      "std_ann_return_pct": 0.8357348389893579,
+      "min_pct": 4.095122701457599,
+      "max_pct": 7.454580011747458
+    }
+  },
+  "n_collars_per_window_resets": "quarterly resets; 36 in dev+val, 27 in the seen window"
+}

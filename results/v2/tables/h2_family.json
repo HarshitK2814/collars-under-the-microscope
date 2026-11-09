@@ -1,0 +1,24 @@
+{
+  "window": "2011-01..2019-12 (development + validation)",
+  "n_members": 168,
+  "n_days": 2264,
+  "n_resets_per_member": 36,
+  "pbo": 0.3839160839160839,
+  "n_combinations": 12870,
+  "best_member": "vol_phase50",
+  "best_sharpe_ci": {
+    "sharpe": 1.1178600867840527,
+    "lo": 0.4997277492797715,
+    "hi": 1.722229462499598,
+    "n_days": 2264
+  },
+  "expected_max_sharpe_noise_annual": 0.2895780642206174,
+  "dsr_best": 0.9925244261514728,
+  "family_sharpe_median": 0.8920460242668992,
+  "family_sharpe_min": 0.6152616950005192,
+  "family_sharpe_max": 1.1178600867840527,
+  "v1_baseline_phase0_sharpe": 1.0226005227092518,
+  "v1_baseline_rank": 14,
+  "cost_note": "v1 half-spread h on every leg at each reset; no commissions, no impact; capacity not modelled here",
+  "H2_supported": false
+}

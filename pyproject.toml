@@ -23,6 +23,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+v2 = ["arch>=7", "QuantLib>=1.34"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

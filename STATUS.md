@@ -21,3 +21,8 @@ Headline (locked test 2020–23, indicative because CLLZ tracking error was 3.7%
 - Published on GitHub (public), 2026-10-13. Committed `research/preregistration.md` first (`prereg: freeze`), then the rest.
 - Optional: launch video (no company or personal names), interactive explorer, paper.md.
 - Optional: real SPX option chains (WRDS/OptionMetrics) for a Tier-A replication, the most valuable next step.
+
+## v2 (2026-11-09): COMPLETE
+Industry-grade v2 done (plan `../.plans/v2/09-p2-v2.md`). Prereg v2 hash `11f656cd0a6f`. H1, H2, H3 all NOT SUPPORTED
+(see `research/results_v2.md`). Forward log: `results/v2/forward/forward.csv` (run `scripts/v2/forward.py --refresh`; earliest read 2027-11).
+Not done: SVI per date (no free historical chains), contract-level N-PORT value marks (period-end values are expiry intrinsic).

@@ -135,3 +135,23 @@ resets, so Sharpe CIs are wide.
 *Pathetic Protection* · Hoffstein, Faber & Braun (2020) *Rebalance Timing Luck* · Carr & Wu (2009) *Variance Risk Premiums*.
 
 *Research artifact, not investment advice.*
+
+## 9. v2 upgrade (2026-11): industry-grade checks
+
+v1 above is unchanged and sealed. v2 adds tests that a buy-side reviewer would ask for. Pre-registration: `research/preregistration_v2.md` (hash `11f656cd0a6f`, committed before any v2 test). Full numbers, generated from `results/v2/tables`: `research/results_v2.md`. Evidence: `research/evidence_v2.md`. Log: `research/experiment_log_v2.md`.
+
+**Prior art, said plainly.** Reset-day timing luck in costless put-spread collars was already published by Braun, Hoffstein, Israelov and Nze Ndong (2023). This project is a free-data replication on one named fund family, plus the extensions below.
+
+**Timing and costs.** Strikes and fills are set at the reset-day 16:00 close using data up to that close, held to the next reset. Every option trade pays the v1 half-spread; no commissions or market impact; capacity is not modelled. Choices use 2011-2019 only; 2020-2026 is labelled `seen period (v1 reported it)`.
+
+| Test | Verdict | Number |
+|---|---|---|
+| H1 GJR-GARCH beats VIX3M as the vol input | **Not supported** (VIX3M is better) | QLIKE gap -0.083, CI [-0.127, -0.043], 691 origins, validation 2017-19 |
+| H2 best phase or ladder in the 168-collar family is overfit | **Not supported** | PBO 0.38 (needs > 0.5); deflated Sharpe of best 0.99 |
+| H3 past Hawkes crash intensity at the reset predicts collar vs beta-matched return | **Not supported** | NW t 0.68 (needs > 2) |
+
+What else v2 found (descriptive): QuantLib agrees with the Black-76 pricer to machine precision; the real Cboe chain's quoted half-spread is about 0.04 vol points versus v1's 0.46, so v1 costs are conservative at small size; 4x the v1 spread cuts the baseline collar by about 2.3 pp a year but does not narrow the spread between reset days; conformal 90% intervals on the pricer's call-cap error cover 0.90 of 48 N-PORT quarters across the three sister funds (seen period); fund size is large relative to listed open interest at the put strikes (one snapshot). The Sharpes near 1 are the 2011-2019 equity bull market, not skill.
+
+**Forward test.** `python scripts/v2/forward.py --refresh` logs the phase-0 collar, the 3-tranche ladder and the JHEQX fund from 2026-11. Earliest read 2027-11.
+
+Reproduce v2: `pip install -e ".[v2,dev]"`, then `python scripts/v2/{h1_vol,h2_family,h3_hawkes,pricing_checks,conformal_nport,make_results_v2}.py` (needs the git-ignored `data/`).
